@@ -1,2 +1,6 @@
-# linda
-Home automation assistant for the Raspberry Pi
+# Linda: Home Automation System for the Raspberry Pi
+
+## Commands
+  - Check the weather
+  - Tell a joke
+

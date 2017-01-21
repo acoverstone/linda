@@ -1,6 +1,6 @@
 # Linda: Home Automation System for the Raspberry Pi
 
-## Commands
+## Possible Commands
   - Check the weather
   - Tell a joke
 

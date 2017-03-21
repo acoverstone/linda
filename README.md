@@ -3,4 +3,9 @@
 ## Possible Commands
   - Check the weather
   - Tell a joke
+  - Update from github
+  - Coffee
+  - Pi to sleep
+  - Play music/meditations
+  
 

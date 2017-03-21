@@ -1,0 +1,9 @@
+HOW TO RUN CODE:
+	python linda.py
+
+
+TODO:
+	Create how-to for setup on pi (maybe makefile/script)
+	Connect recognizer and speech recognition, set up main structure loop
+	Train wit AI
+	Create commands

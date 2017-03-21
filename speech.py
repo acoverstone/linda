@@ -1,4 +1,5 @@
 import pyaudio
+import pyttsx
 import speech_recognition as sr
 
 
@@ -22,7 +23,6 @@ def takeInput():
 
 
 def controlLoop():
-        print "CAT"
         takeInput()
         
 

@@ -5,7 +5,7 @@ import snowboydecoder
 import sys
 import signal
 import main
-import speech
+from commands import speech
 
 interrupted = False
 

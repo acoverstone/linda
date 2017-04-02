@@ -1,15 +1,17 @@
 import snowboydecoder
 import sys
 import signal
-import speech
+from commands import speech
+
 
 from commands.weatherCmd import WeatherCmd
+from commands.jokeCmd import JokeCmd
 
 
 def controlLoop():
         speech.speak('Hi. How can I help you?')
         
         commandString = speech.takeInput()
-        commands = [WeatherCmd()]
+        commands = [WeatherCmd(), JokeCmd()]
         for cmd in commands:
             cmd.decode(commandString)

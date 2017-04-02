@@ -1,5 +1,5 @@
 from command import Command
-from linda import speech
+import speech
 
 
 class JokeCmd(Command):             #command for telling jokes

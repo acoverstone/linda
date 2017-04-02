@@ -38,6 +38,6 @@ def speak(input):
 def controlLoop():
         speak('Hi. How can I help you?')
         commandString = takeInput()
-        commands = [WeatherCmd()]
+        commands = [WeatherCmd() JokeCmd()]
         for cmd in commands:
             cmd.decode(commandString)

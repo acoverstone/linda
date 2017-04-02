@@ -22,10 +22,11 @@ def takeInput():
                 print("Wit.ai could not understand audio.")
         except sr.RequestError as e:
                 print("Could not request results from wit.ai; {0}".format(e))
+        return command
 
 
 def controlLoop():
-        ## Say 'How can I help you?' 
+        ## Say 'How can I help you?'
         engine = pyttsx.init()
         voices = engine.getProperty('voices')
         for voice in voices:
@@ -35,10 +36,8 @@ def controlLoop():
         engine.say('Hi. How can I help you?')
         engine.runAndWait()
 
-        
-        takeInput()
-        commands = [WeatherCmd() JokeCmd()]
-        
-        
 
-        
+        commandString = takeInput()
+        commands = [WeatherCmd()]
+        for cmd in commands:
+            cmd.decode(commandString)

@@ -140,5 +140,5 @@ class WeatherCmd(Command):             #command for telling jokes
         print('eve ' + day5tempeve)
         print('night ' + day5tempnight)
 
-weatherCmd = WeatherCmd()
-weatherCmd.decode("weather");
+##weatherCmd = WeatherCmd()
+##weatherCmd.decode("weather")

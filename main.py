@@ -1,39 +1,15 @@
-# Entry point to the program
-# Run with 'python main.py linda.pmdl'
-
 import snowboydecoder
 import sys
 import signal
+import speech
 
-interrupted = False
-
-
-def signal_handler(signal, frame):
-    global interrupted
-    interrupted = True
+from commands.weatherCmd import WeatherCmd
 
 
-def interrupt_callback():
-    global interrupted
-    return interrupted
-
-# uncomment for different models, for Linda we hardcode the pmdl
-# if len(sys.argv) == 1:
-#     print("Error: need to specify model name")
-#     print("Usage: python demo.py your.model")
-#     sys.exit(-1)
-# model = sys.argv[1]
-model = "resources/linda.pmdl"
-
-# capture SIGINT signal, e.g., Ctrl+C
-signal.signal(signal.SIGINT, signal_handler)
-
-detector = snowboydecoder.HotwordDetector(model, sensitivity=0.5)
-print('Listening... Press Ctrl+C to exit')
-
-# main loop, change callback to change functionality
-detector.start(detected_callback=snowboydecoder.play_audio_file,
-               interrupt_check=interrupt_callback,
-               sleep_time=0.03)
-
-detector.terminate()
+def controlLoop():
+        speech.speak('Hi. How can I help you?')
+        
+        commandString = speech.takeInput()
+        commands = [WeatherCmd()]
+        for cmd in commands:
+            cmd.decode(commandString)

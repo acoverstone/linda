@@ -1,5 +1,5 @@
 from command import Command
-from ./speech import speech
+import speech
 
 
 class JokeCmd(Command):             #command for telling jokes
@@ -9,13 +9,13 @@ class JokeCmd(Command):             #command for telling jokes
         response = speech.takeInput();
         if("there" not in response):
             speech.speak("the correct response is, who's there.")
-            execute(self)
+            self.execute()
             return
         speech.speak("A herd");
         response = speech.takeInput();
-        if("who" is not in response):
+        if("who" not in response):
             speech.speak("the correct response is, A herd who.")
-            execute(self)
+            self.execute()
             return
         speech.speak("A herd you were home, so I came on over")
 

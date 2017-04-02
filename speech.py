@@ -2,6 +2,8 @@ import pyaudio
 import pyttsx
 import speech_recognition as sr
 
+from commands.weatherCmd import WeatherCmd
+from commands.jokeCmd import JokeCmd
 
 # obtain audio input from the microphone
 def takeInput():
@@ -23,7 +25,20 @@ def takeInput():
 
 
 def controlLoop():
+        ## Say 'How can I help you?' 
+        engine = pyttsx.init()
+        voices = engine.getProperty('voices')
+        for voice in voices:
+                engine.setProperty('voice', voice.id)
+                print voice
+        engine.setProperty('voice', 'en-us+f1')
+        engine.say('Hi. How can I help you?')
+        engine.runAndWait()
+
+        
         takeInput()
+        commands = [WeatherCmd() JokeCmd()]
+        
         
 
         

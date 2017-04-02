@@ -24,8 +24,7 @@ def takeInput():
                 print("Could not request results from wit.ai; {0}".format(e))
         return command
 
-
-def controlLoop():
+def speak(input):
         ## Say 'How can I help you?'
         engine = pyttsx.init()
         voices = engine.getProperty('voices')
@@ -33,10 +32,11 @@ def controlLoop():
                 engine.setProperty('voice', voice.id)
                 print voice
         engine.setProperty('voice', 'en-us+f1')
-        engine.say('Hi. How can I help you?')
+        engine.say(input)
         engine.runAndWait()
 
-
+def controlLoop():
+        speak('Hi. How can I help you?')
         commandString = takeInput()
         commands = [WeatherCmd()]
         for cmd in commands:

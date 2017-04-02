@@ -17,3 +17,4 @@ TODO:
 	Connect recognizer and speech recognition, set up main structure loop
 	Train wit AI
 	Create commands
+		

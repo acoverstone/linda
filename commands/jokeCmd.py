@@ -6,7 +6,6 @@ from screens.weatherScreen import weatherScreen
 
 class JokeCmd(Command):             #command for telling jokes
     INSTRUCTIONS = ['joke','jokes'] #list of keywords
-    command = "Joke"
     def execute(self):              #filled in abstract execute method
         Screen.show_frame("JokeScreen")
         speech.speak("Knock, Knock");

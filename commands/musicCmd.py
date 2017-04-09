@@ -5,9 +5,10 @@ from pygame.mixer import Sound
 
 
 class MusicCmd(Command):
-	INSTRUCTIONS = ['music', 'better', 'together']
+	INSTRUCTIONS = ['music', 'song']
 	def execute(self)
-		songs = ['better_together']
+		speech.speak("What song would you like to play?")
+		songs = ['better together']
 		response = speech.takeInput()
 		if(songs not in response)
 			speech.speak("This song does not exist in the library.")
@@ -15,9 +16,7 @@ class MusicCmd(Command):
 			return
 
 		pygame.mixer.init()
-		better_together = Sound("music/better_together.wav")
+		better_together = Sound("../resources/music/better_together.wav")
 
-		if("better" in response)
-			better_together.play()
-		if("together" in response)
+		if("better together" in response)
 			better_together.play()

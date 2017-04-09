@@ -5,6 +5,7 @@ import speech
 class JokeCmd(Command):             #command for telling jokes
     INSTRUCTIONS = ['joke','jokes'] #list of keywords
     def execute(self):              #filled in abstract execute method
+        global Screens
         Screen.show_frame("JokeScreen")
         speech.speak("Knock, Knock")
         response = speech.takeInput()

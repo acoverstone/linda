@@ -6,6 +6,7 @@ import sys
 import signal
 import main
 from commands import speech
+from commands.screens.screens import Screens
 
 interrupted = False
 
@@ -30,13 +31,11 @@ model = "resources/linda.pmdl"
 # capture SIGINT signal, e.g., Ctrl+C
 signal.signal(signal.SIGINT, signal_handler)
 
-
+Screens = Screens()
 while True:
     detector = snowboydecoder.HotwordDetector(model, sensitivity=0.5)
     print('Listening... Press Ctrl+C to exit')
     # main loop, change callback to change functionality
-    detector.start(detected_callback= main.controlLoop,#snowboydecoder.play_audio_file,
+    detector.start(detected_callback= main.controlLoop(Screens),#snowboydecoder.play_audio_file,
                interrupt_check=interrupt_callback,
                sleep_time=0.03)
-
-

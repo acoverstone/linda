@@ -10,13 +10,12 @@ from commands.jokeCmd import JokeCmd
 from commands.timerCmd import TimerCmd
 
 
-def controlLoop():
+def controlLoop(Screens):
         speech.speak('Hi. How can I help you?')
-        Screen = Screen()
         commandString = speech.takeInput()
         commands = [WeatherCmd(), JokeCmd(), ExitCmd(), TimerCmd()]
         for cmd in commands:
-            cmd.decode(commandString,Screen)
+            cmd.decode(commandString,Screens)
 
-        Screen.update_idletasks()
-        Screen.update()
+        Screens.update_idletasks()
+        Screens.update()

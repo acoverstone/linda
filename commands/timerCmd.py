@@ -12,5 +12,3 @@ class TimerCmd(Command):             #command for telling jokes
 def hello():
     speech.speak("beep beep beep beep")
     print "hello, world"
-
-    

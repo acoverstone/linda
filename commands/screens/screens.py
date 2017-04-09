@@ -37,7 +37,7 @@ class Screens(tk.Tk):
 
     def get_frame(self):
         return frame
-        
+
     def knockknockjoke(self):
         frame.knock()
         frame.response1()

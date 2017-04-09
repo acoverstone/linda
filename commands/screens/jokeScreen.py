@@ -15,7 +15,7 @@ class JokeScreen(tk.Frame):
         # self = tk.Frame(root, bg='black')
         # self.pack(fill='both', expand='yes')
         self.controller = controller
-        label = tk.Label(self, text="Knock, Knock joke", fg="white",bg="black",font=("Helvetica", 30))
+        label = tk.Label(self, text="Knock, Knock", fg="white",bg="black",font=("Helvetica", 30))
         label.place(relx=0.5,rely=0.1,anchor='center')
 
 
@@ -24,8 +24,8 @@ class JokeScreen(tk.Frame):
         knock = tk.Label(self, text="Knock Knock", fg="white",bg="black",font=("Helvetica", 30))
         knock.place(relx=0.5,rely=0.15,anchor='center')
     def response1(self):
-        response1 = tk.Label(self, text="A herd", fg="white",bg="black",font=("Helvetica", 30))
+        response1 = tk.Label(self, text="Who", fg="white",bg="black",font=("Helvetica", 30))
         response1.place(relx=0.5,rely=0.2,anchor='center')
     def response2(self):
-        response2 = tk.Label(self, text="I heard your parents weren't home so I came on over", fg="white",bg="black",font=("Helvetica", 30))
+        response2 = tk.Label(self, text="Is there an owl in here? LOL", fg="white",bg="black",font=("Helvetica", 30))
         response2.place(relx=0.5,rely=0.25,anchor='center')

@@ -34,8 +34,10 @@ class Screens(tk.Tk):
         '''Show a frame for the given page name'''
         frame = self.frames[page_name]
         frame.tkraise()
+        print("Changing frames")
+        self.update()
 
-    def get_frame(self):
+    def getFrame(self):
         return frame
 
     def knockknockjoke(self):

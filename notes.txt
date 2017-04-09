@@ -1,12 +1,13 @@
 HOW TO SET UP:
 	sudo apt-get update
-	manually download pyaudio 0.2.9 
+	manually download pyaudio 0.2.9
 	sudo apt-get install swig3.0 sox
 	sudo apt-get install libatlas-base-dev
 	sudo pip install SpeechRecognition
 	sudo apt-get install espeak
 	sudo pip install pyttsx
 	sudo pip install pyowm
+	sudo pip install PyGithub
 
 HOW TO RUN CODE:
 	python linda.py

@@ -28,7 +28,7 @@ class Screens(tk.Tk):
             # will be the one that is visible.
             frame.grid(row=0, column=0, sticky="nsew")
 
-        self.show_frame("JokeScreen")
+        self.show_frame("WeatherScreen")
 
     def show_frame(self, page_name):
         '''Show a frame for the given page name'''

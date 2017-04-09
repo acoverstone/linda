@@ -6,12 +6,13 @@ from commands import speech
 from commands.exitCmd import ExitCmd
 from commands.weatherCmd import WeatherCmd
 from commands.jokeCmd import JokeCmd
+from commands.timerCmd import TimerCmd
 
 
 def controlLoop():
         speech.speak('Hi. How can I help you?')
         
         commandString = speech.takeInput()
-        commands = [WeatherCmd(), JokeCmd(), ExitCmd()]
+        commands = [WeatherCmd(), JokeCmd(), ExitCmd(), TimerCmd()]
         for cmd in commands:
             cmd.decode(commandString)

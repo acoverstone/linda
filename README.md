@@ -7,5 +7,5 @@
   - Coffee
   - Pi to sleep
   - Play music/meditations
-  
+  - Set a reminder/timer
 

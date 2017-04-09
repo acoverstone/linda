@@ -16,6 +16,3 @@ def controlLoop(Screens):
         commands = [WeatherCmd(), JokeCmd(), ExitCmd(), TimerCmd()]
         for cmd in commands:
             cmd.decode(commandString,Screens)
-
-        Screens.update_idletasks()
-        Screens.update()

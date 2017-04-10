@@ -32,7 +32,9 @@ def parseTime(response):
     hourIndex = -10
     minuteIndex = -10
     secondIndex = -10
-    totalztime = 0
+    totalTime = 0
+    mainNumber = 0
+    possibleSecondNumber = 0
     
     response = response.split(" ")
     if "hour" in response:
@@ -51,17 +53,23 @@ def parseTime(response):
 
     if hourIndex != -10:
         mainNumber = text2int(response[hourIndex - 1])
-        possibleSecondNumber = text2int(response[hourIndex - 2])
+        if hourIndex > 1:
+            if(text2int(response[hourIndex - 2]) != 0): 
+                possibleSecondNumber = text2int(response[hourIndex - 2])
         totalTime = totalTime + 3600 * mainNumber + 3600 * possibleSecondNumber
 
     if minuteIndex != -10:
         mainNumber = text2int(response[minuteIndex - 1])
-        possibleSecondNumber = text2int(response[minuteIndex - 2])
+        if minuteIndex > 1:
+            if(text2int(response[minuteIndex - 2]) != 0): 
+                possibleSecondNumber = text2int(response[minuteIndex - 2])
         totalTime = totalTime + 60 * mainNumber + 60 * possibleSecondNumber
 
     if secondIndex != -10:
-        mainNumber = text2int(response[hourIndex - 1])
-        possibleSecondNumber = text2int(response[hourIndex - 2])
+        mainNumber = text2int(response[secondIndex - 1])
+        if secondIndex > 1:    
+            if(text2int(response[secondIndex - 2]) != 0): 
+                possibleSecondNumber = text2int(response[secondIndex - 2])
         totalTime = totalTime + mainNumber + possibleSecondNumber
 
 
@@ -88,7 +96,7 @@ def text2int(textnum, numwords={}):
     current = result = 0
     for word in textnum.split():
         if word not in numwords:
-          raise Exception("Illegal word: " + word)
+          return 0
 
         scale, increment = numwords[word]
         current = current * scale + increment

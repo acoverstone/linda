@@ -4,7 +4,7 @@ import os
 
 
 class MusicCmd(Command):
-        songs = ['better together']
+    songs = ['better together']
 	INSTRUCTIONS = ['music', 'song']
 	def execute(self,Screens):
         Screens.show_frame("MusicScreen")

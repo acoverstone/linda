@@ -1,6 +1,7 @@
 import Tkinter as tk
 import time
 
+from commands.screens.titleScreen import TitleScreen
 from commands.screens.jokeScreen import JokeScreen
 from commands.screens.weatherScreen import WeatherScreen
 

@@ -8,6 +8,7 @@ from commands.exitCmd import ExitCmd
 from commands.weatherCmd import WeatherCmd
 from commands.jokeCmd import JokeCmd
 from commands.timerCmd import TimerCmd
+from commands.musicCmd import MusicCmd
 
 Screens = Screens()
 def controlLoop():

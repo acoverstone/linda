@@ -4,6 +4,6 @@ import sys
 
 class ExitCmd(Command):             #command for telling jokes
     INSTRUCTIONS = ['exit','quit', 'terminate'] #list of keywords
-    def execute(self):              #filled in abstract execute method
+    def execute(self,Screens):              #filled in abstract execute method
         speech.speak("Now terminating.");
         sys.exit()

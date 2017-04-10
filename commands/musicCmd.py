@@ -6,13 +6,13 @@ from pygame.mixer import Sound
 
 class MusicCmd(Command):
 	INSTRUCTIONS = ['music', 'song']
-	def execute(self)
+	def execute(self,Screens)
 		speech.speak("What song would you like to play?")
 		songs = ['better together']
 		response = speech.takeInput()
 		if(songs not in response)
 			speech.speak("This song does not exist in the library.")
-			execute(self)
+			execute(self,Screens)
 			return
 
 		pygame.mixer.init()

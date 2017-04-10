@@ -10,6 +10,8 @@ class MusicScreen(tk.Frame):
         label = tk.Label(self, text="Music", fg="white",bg="black",font=("Helvetica", 30))
         label.place(relx=0.5,rely=0.2,anchor='center')
         photo = tk.PhotoImage(file = 'resources/images/music.gif')
-        gif = tk.Label(self ,image = photo)
+        canvas = Canvas(width = 300, height = 200, bg = 'yellow')
+        canvas.pack(expand = YES, fill = BOTH)
+        gif = canvas.create_image(50, 10, image = gif1, anchor = NW)
         gif.image = photo
-        gif.grid(row=0, column=0)
+        #gif.place(relx=0.5,rely=0.3,anchor='center')

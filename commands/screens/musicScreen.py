@@ -9,7 +9,7 @@ class MusicScreen(tk.Frame):
         self.controller = controller
         label = tk.Label(self, text="Music", fg="white",bg="black",font=("Helvetica", 30))
         label.place(relx=0.5,rely=0.2,anchor='center')
-        photo = tk.PhotoImage(file = '../../resources/images/music.gif')
+        photo = tk.PhotoImage(file = 'resources/images/music.gif')
         gif = tk.Label(self ,image = photo)
         gif.image = photo
         gif.grid(row=0, column=0)

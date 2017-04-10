@@ -19,7 +19,7 @@ class MusicCmd(Command):
                     found = True
             if(not found):
                 speech.speak("This song does not exist in the library.")
-                self.execute(self,Screens)
+                self.execute(Screens)
                 return
             if("better together" in response):
                 os.system("aplay resources/music/better_together.wav")

@@ -2,7 +2,7 @@ from command import Command
 import speech
 
 
-class todoCmd(Command):
+class TodoCmd(Command):
 	INSTRUCTIONS = ["to do"]
 
 	def execute(self,Screens):
@@ -14,7 +14,7 @@ class todoCmd(Command):
 			add_response = speech.takeInput()
 
 			with open("resources/todo.txt", "a") as myfile:
-				myfile.write(response + "/n")
+				myfile.write(add_response + "\n")
 
 		elif "delete" in response:
 			speech.speak("What would you like to delete from your to do list?")
@@ -39,17 +39,17 @@ class todoCmd(Command):
 				open("resources/todo.txt", "w").close()
 			else:
 				self.execute(Screens)
-            	return
+                                return
 
-        elif "read" in response:
-        	with open("resources/todo.txt") as f:
-        		todo_list = f.readlines()
-        	speech.speak(todo_list)
+                elif "read" in response:
+                        with open("resources/todo.txt") as f:
+                                todo_list = f.read().splitlines()
+                        speech.speak(todo_list)
 
-        else:
-        	speech.speak("I'm sorry that command does not exist")
-        	self.execute(Screens)
-        	return
+                else:
+                        speech.speak("I'm sorry that command does not exist")
+                        self.execute(Screens)
+                        return
 
 
 

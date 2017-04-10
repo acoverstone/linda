@@ -9,10 +9,7 @@ from commands.weatherCmd import WeatherCmd
 from commands.jokeCmd import JokeCmd
 from commands.timerCmd import TimerCmd
 from commands.musicCmd import MusicCmd
-<<<<<<< HEAD
 from commands.updateCmd import UpdateCmd
-=======
->>>>>>> master
 
 Screens = Screens()
 def controlLoop():

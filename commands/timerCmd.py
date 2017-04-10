@@ -7,7 +7,7 @@ import sys
 class TimerCmd(Command):             #command for starting a timer
     INSTRUCTIONS = ['timer'] #list of keywords
 
-    def execute(self):
+    def execute(self,Screens):
         speech.speak("How long do you wish to set the timer for?")
         # Input must be in the form of ____ hour, ___ minute, _____ seconds
         response = speech.takeInput()

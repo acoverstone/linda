@@ -9,9 +9,3 @@ class MusicScreen(tk.Frame):
         self.controller = controller
         label = tk.Label(self, text="Music", fg="white",bg="black",font=("Helvetica", 30))
         label.place(relx=0.5,rely=0.2,anchor='center')
-        photo = tk.PhotoImage(file = 'resources/images/music.gif')
-        canvas = Canvas(width = 300, height = 200, bg = 'yellow')
-        canvas.pack(expand = YES, fill = BOTH)
-        gif = canvas.create_image(50, 10, image = gif1, anchor = NW)
-        gif.image = photo
-        #gif.place(relx=0.5,rely=0.3,anchor='center')

@@ -9,13 +9,16 @@ from commands.weatherCmd import WeatherCmd
 from commands.jokeCmd import JokeCmd
 from commands.timerCmd import TimerCmd
 from commands.musicCmd import MusicCmd
+<<<<<<< HEAD
 from commands.updateCmd import UpdateCmd
+=======
+>>>>>>> master
 
 Screens = Screens()
 def controlLoop():
         speech.speak('Hi. How can I help you?')
         commandString = speech.takeInput()
-        commands = [WeatherCmd(), JokeCmd(), ExitCmd(), TimerCmd(), UpdateCmd()]
+        commands = [WeatherCmd(), JokeCmd(), ExitCmd(), TimerCmd(), MusicCmd(), UpdateCmd()]
         for cmd in commands:
             cmd.decode(commandString,Screens)
 

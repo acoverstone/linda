@@ -1,22 +1,30 @@
 from command import Command
-from ./speech import speech
-import pygame.mixer
-from pygame.mixer import Sound
+import speech
+import os
 
 
 class MusicCmd(Command):
+        songs = ['better together']
 	INSTRUCTIONS = ['music', 'song']
-	def execute(self,Screens)
+	def execute(self,Screens):
 		speech.speak("What song would you like to play?")
-		songs = ['better together']
-		response = speech.takeInput()
-		if(songs not in response)
-			speech.speak("This song does not exist in the library.")
-			execute(self,Screens)
-			return
+                found = False
 
-		pygame.mixer.init()
-		better_together = Sound("../resources/music/better_together.wav")
+                while not found:
+                    response = speech.takeInput()
 
-		if("better together" in response)
-			better_together.play()
+                    if "quit" in response:
+                        break
+
+                    for song in self.songs:
+                        if song in response:
+                            found = True
+
+                	if(not found):
+                            speech.speak("This song does not exist in the library.")
+                            execute(self)
+                            return
+
+
+		if("better together" in response):
+                        os.system("aplay resources/music/better_together.wav")

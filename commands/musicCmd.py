@@ -7,6 +7,7 @@ class MusicCmd(Command):
         songs = ['better together']
 	INSTRUCTIONS = ['music', 'song']
 	def execute(self,Screens):
+        Screens.show_frame("MusicScreen")
 		speech.speak("What song would you like to play?")
                 found = False
 

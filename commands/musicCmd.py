@@ -22,7 +22,7 @@ class MusicCmd(Command):
 
                 	if(not found):
                             speech.speak("This song does not exist in the library.")
-                            execute(self)
+                            self.execute(self,Screens)
                             return
 
 

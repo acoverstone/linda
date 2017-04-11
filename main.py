@@ -11,18 +11,19 @@ from commands.timerCmd import TimerCmd
 from commands.musicCmd import MusicCmd
 from commands.updateCmd import UpdateCmd
 from commands.todoCmd import TodoCmd
+from commands.reminderCmd import ReminderCmd
 
 Screens = Screens()
 def controlLoop():
         speech.speak('Hi, how can I help you?')
         commandString = speech.takeInput()
-        commands = [WeatherCmd(), JokeCmd(), ExitCmd(), TimerCmd(), MusicCmd(), UpdateCmd(), TodoCmd()]
+        commands = [WeatherCmd(), JokeCmd(), ReminderCmd(), ExitCmd(), TimerCmd(), MusicCmd(), UpdateCmd(), TodoCmd()]
         found = False
         for cmd in commands:
                 if cmd.decode(commandString,Screens):
                         found = True
         if not found:
-                speech.speak("Im sorry, I did not understand that command.")
+                speech.speak("I am sorry, I did not understand that command.")
 
 def getScreens():
     global Screens

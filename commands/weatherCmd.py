@@ -1,5 +1,6 @@
 import pyowm
 from datetime import datetime
+import speech
 import string
 from command import Command
 
@@ -26,6 +27,9 @@ class WeatherCmd(Command):             #command for telling jokes
         print((dtu[5:7] + '/' + dtu[8:10] + '/' + dtu[0:4]))
         print(day_of_the_week)
         print(string.capwords(day1._status))
+
+        weatherString = "Today is " + day1._status + " with a high of " + str(round(day1._temperature['max']*9/5-459.67,2)) + " degrees, and a low of " + str(round(day1._temperature['min']*9/5-459.67,2)) + " degrees."
+        speech.speak(weatherString)
 
         day1tempmin = str(round(day1._temperature['min']*9/5-459.67,2))
         day1tempmax = str(round(day1._temperature['max']*9/5-459.67,2))

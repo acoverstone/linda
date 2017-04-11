@@ -1,5 +1,5 @@
 import pyaudio
-import pyttsx
+import os
 import speech_recognition as sr
 
 # obtain audio input from the microphone
@@ -22,16 +22,8 @@ def takeInput():
         return command
 
 def speak(input):
-        ## Say 'How can I help you?'
-        engine = pyttsx.init()
-        voices = engine.getProperty('voices')
-        for voice in voices:
-                engine.setProperty('voice', voice.id)
-                print voice
-        engine.setProperty('voice', 'en-us+f4')
-        rate = engine.getProperty('rate')
-        print rate
-        engine.setProperty('rate', rate-30)
-        engine.say(input)
-        engine.runAndWait()
+        command = "cd picopi/pico/tts/ && ./testtts '. " + input + "'| aplay --rate=16000 --channels=1 --format=S16_LE"
+        print command
+        os.system(command)
+        os.system("cd ../../..")
 

@@ -14,11 +14,15 @@ from commands.todoCmd import TodoCmd
 
 Screens = Screens()
 def controlLoop():
-        speech.speak('Hi. How can I help you?')
+        speech.speak('Hi, how can I help you?')
         commandString = speech.takeInput()
         commands = [WeatherCmd(), JokeCmd(), ExitCmd(), TimerCmd(), MusicCmd(), UpdateCmd(), TodoCmd()]
+        found = False
         for cmd in commands:
-            cmd.decode(commandString,Screens)
+                if cmd.decode(commandString,Screens):
+                        found = True
+        if not found:
+                speech.speak("Im sorry, I did not understand that command.")
 
 def getScreens():
     global Screens

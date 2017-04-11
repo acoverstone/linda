@@ -4,8 +4,9 @@ HOW TO SET UP:
 	sudo apt-get install swig3.0 sox
 	sudo apt-get install libatlas-base-dev
 	sudo pip install SpeechRecognition
-	sudo apt-get install espeak
-	sudo pip install pyttsx
+	# sudo apt-get install espeak
+	# sudo pip install pyttsx
+	follow directions from "https://github.com/DougGore/picopi"
 	sudo pip install pyowm
 	sudo pip install PyGithub
 

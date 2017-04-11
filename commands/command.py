@@ -5,6 +5,8 @@ class Command(object):
         for instruction in self.INSTRUCTIONS:  #loops through all our instructions
             if instruction in input:    #checks if it needs to execute this command
                 self.execute(Screens)       #executes the command
+                return True
+        return False
 
     @abc.abstractmethod
     def execute(self,Screens):

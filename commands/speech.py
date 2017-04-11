@@ -25,10 +25,13 @@ def speak(input):
         ## Say 'How can I help you?'
         engine = pyttsx.init()
         voices = engine.getProperty('voices')
-##        for voice in voices:
-##                engine.setProperty('voice', voice.id)
-##                print voice
-        engine.setProperty('voice', 'en-us+f1')
+        for voice in voices:
+                engine.setProperty('voice', voice.id)
+                print voice
+        engine.setProperty('voice', 'en-us+f4')
+        rate = engine.getProperty('rate')
+        print rate
+        engine.setProperty('rate', rate-30)
         engine.say(input)
         engine.runAndWait()
 

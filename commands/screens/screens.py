@@ -33,16 +33,14 @@ class Screens(tk.Tk):
         self.show_frame("TitleScreen")
 
     def show_frame(self, page_name):
+        global frame
         '''Show a frame for the given page name'''
         frame = self.frames[page_name]
         frame.tkraise()
-        print("Changing frames")
+        print("Changing frames " + page_name)
         self.update()
 
     def getFrame(self):
+        global frame
         return frame
 
-    def knockknockjoke(self):
-        frame.knock()
-        frame.response1()
-        frame.response2()

@@ -7,6 +7,7 @@ from command import Command
 class WeatherCmd(Command):             #command for telling jokes
     INSTRUCTIONS = ['weather']      #list of keywords
     def execute(self,Screens):              #filled in abstract execute method
+        Screens.show_frame("WeatherScreen")
         frame = Screens.getFrame()
         #dd22fb7a8f13a5c753721b8b9d2b447f
         #fdde6469a8c085d628b1d10d371a798c

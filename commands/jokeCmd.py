@@ -12,6 +12,7 @@ class JokeCmd(Command):             #command for telling jokes
         response = speech.takeInput()
         if("there" not in response):
             speech.speak("the correct response is, who's there.")
+            frame.clearScreen()
             self.execute(Screens)
             return
         speech.speak("who");
@@ -20,6 +21,7 @@ class JokeCmd(Command):             #command for telling jokes
         response = speech.takeInput();
         if("who" not in response):
             speech.speak("the correct response is, who who.")
+            frame.clearScreen()
             self.execute(Screens)
             return
         frame.response2()

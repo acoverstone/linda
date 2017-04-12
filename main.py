@@ -29,7 +29,7 @@ def controlLoop():
                         found = True
         if not found:
                 speech.speak("I am sorry, I did not understand that command.")
-                Screens.show_frame("TitleScreen")
+        Screens.show_frame("TitleScreen")
 
 def getScreens():
     global Screens

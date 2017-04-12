@@ -5,7 +5,7 @@ import random
 
 
 class MeditationCmd(Command):
-    
+
     INSTRUCTIONS = ['meditate', 'meditation']
     def execute(self,Screens):
         found = False
@@ -19,8 +19,8 @@ class MeditationCmd(Command):
                     found = True
                     if(playing == 0):
                         os.system("aplay resources/meditations/one.wav")
+                        Screens.show_frame("TitleScreen")
             if(not found):
                 speech.speak("There are no meditations in your library")
                 self.execute(Screens)
                 return
-            

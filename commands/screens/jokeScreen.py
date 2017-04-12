@@ -8,8 +8,7 @@ class JokeScreen(tk.Frame):
         width = 2000
         tk.Frame.__init__(self, parent,width=width,height=height,bg="black")
         self.controller = controller
-        label = tk.Label(self, text="Knock, Knock", fg="white",bg="black",font=("Helvetica", 30))
-        label.place(relx=0.5,rely=0.1,anchor='center')
+
 
 
     def knock(self):

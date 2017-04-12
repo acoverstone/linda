@@ -45,5 +45,7 @@ class JokeCmd(Command):             #command for telling jokes
         Screens.update()
         speech.speak("Is there an owl in here? LOL")
         sleep(5)
-        frame.clearScreen()
+        knock.destroy()
+        response1.destroy()
+        response2.destroy()
         Screens.show_frame("TitleScreen")

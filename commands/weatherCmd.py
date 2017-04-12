@@ -13,7 +13,7 @@ class WeatherCmd(Command):             #command for telling jokes
         #fdde6469a8c085d628b1d10d371a798c
         #a432359e1ee01e2160c85db69ec90ac9
 
-        owm = pyowm.OWM('fdde6469a8c085d628b1d10d371a798c')
+        owm = pyowm.OWM('dd22fb7a8f13a5c753721b8b9d2b447f')
         obs = owm.weather_at_place("Gainesville,Fl")
 
         fd = owm.daily_forecast(name='Gainesville,Fl',limit=5)

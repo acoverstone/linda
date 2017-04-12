@@ -16,13 +16,13 @@ class WeatherScreen(tk.Frame):
         label.place(relx=0.5,rely=0.25,anchor='center')
     def day2(self,day2):
         label = tk.Label(self, text=day2, fg="white",bg="black",font=("Helvetica", 20))
-        label.place(relx=0.20,rely=0.40,anchor='center')
+        label.place(relx=0.20,rely=0.55,anchor='center')
     def day3(self,day3):
         label = tk.Label(self, text=day3, fg="white",bg="black",font=("Helvetica", 20))
-        label.place(relx=0.40,rely=0.40,anchor='center')
+        label.place(relx=0.40,rely=0.55,anchor='center')
     def day4(self,day4):
         label = tk.Label(self, text=day4, fg="white",bg="black",font=("Helvetica", 20))
-        label.place(relx=0.60,rely=0.40,anchor='center')
+        label.place(relx=0.60,rely=0.55,anchor='center')
     def day5(self,day5):
         label = tk.Label(self, text=day5, fg="white",bg="black",font=("Helvetica", 20))
-        label.place(relx=0.80,rely=0.40,anchor='center')
+        label.place(relx=0.80,rely=0.55,anchor='center')

@@ -21,7 +21,7 @@ def controlLoop():
         Screens.show_frame("ListeningScreen")
         speech.speak('Hi, how can I help you?')
         commandString = speech.takeInput()
-        commands = [WeatherCmd(), JokeCmd(), ReminderCmd(), ExitCmd(), TimerCmd(), MusicCmd(), UpdateCmd(), TodoCmd(), MeditationCmd()]
+        commands = [WeatherCmd(), JokeCmd(), ReminderCmd(), ExitCmd(), TimerCmd(), MusicCmd(), UpdateCmd(), MeditationCmd()]
         found = False
 
         for cmd in commands:

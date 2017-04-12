@@ -22,7 +22,7 @@ class Screens(tk.Tk):
         container.grid_columnconfigure(0, weight=1)
 
         self.frames = {}
-        for F in (WeatherScreen, JokeScreen, TitleScreen, MusicScreen,ListeningScreen,TodoScreen):
+        for F in (WeatherScreen, JokeScreen, TitleScreen, MusicScreen,ListeningScreen):
             page_name = F.__name__
             frame = F(parent=container, controller=self)
             self.frames[page_name] = frame

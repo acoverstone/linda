@@ -6,6 +6,8 @@ class TodoCmd(Command):
 	INSTRUCTIONS = ["to do"]
 
 	def execute(self,Screens):
+		Screens.show_frame("TodoScreen")
+		frame = Screens.getFrame()
 		speech.speak("What would you like to do to your to do list?")
 		response = speech.takeInput()
 
@@ -44,17 +46,11 @@ class TodoCmd(Command):
                 elif "read" in response:
                         with open("resources/todo.txt") as f:
                                 todo_list = f.read().splitlines()
+						frame.showList(todo_list)
+						Screens.update()
                         speech.speak(todo_list)
 
                 else:
                         speech.speak("I'm sorry that command does not exist")
                         self.execute(Screens)
                         return
-
-
-
-
-
-
-
-

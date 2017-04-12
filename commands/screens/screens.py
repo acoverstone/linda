@@ -6,6 +6,7 @@ from commands.screens.listeningScreen import ListeningScreen
 from commands.screens.jokeScreen import JokeScreen
 from commands.screens.weatherScreen import WeatherScreen
 from commands.screens.musicScreen import MusicScreen
+from commands.screens.todoScreen import TodoScreen
 
 class Screens(tk.Tk):
     def __init__(self, *args, **kwargs):
@@ -21,7 +22,7 @@ class Screens(tk.Tk):
         container.grid_columnconfigure(0, weight=1)
 
         self.frames = {}
-        for F in (WeatherScreen, JokeScreen, TitleScreen, MusicScreen,ListeningScreen):
+        for F in (WeatherScreen, JokeScreen, TitleScreen, MusicScreen,ListeningScreen,TodoScreen):
             page_name = F.__name__
             frame = F(parent=container, controller=self)
             self.frames[page_name] = frame

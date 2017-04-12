@@ -17,6 +17,7 @@ from commands.meditationCmd import MeditationCmd
 
 Screens = Screens()
 def controlLoop():
+        os.system("amixer cset numid=3 1")
         speech.speak('Hi, how can I help you?')
         commandString = speech.takeInput()
         commands = [WeatherCmd(), JokeCmd(), ReminderCmd(), ExitCmd(), TimerCmd(), MusicCmd(), UpdateCmd(), TodoCmd(), MeditationCmd()]

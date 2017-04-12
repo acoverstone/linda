@@ -1,6 +1,6 @@
 import Tkinter as tk
 
-class ListeningScreen(tk.Frame):
+class TodoScreen(tk.Frame):
     def __init__(self, parent, controller):
         global label
         height = 2000

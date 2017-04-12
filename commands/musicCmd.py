@@ -24,5 +24,7 @@ class MusicCmd(Command):
                 return
             if("better together" in response):
                 frame.now_playing("Better Together by Jack Johnson")
+                Screens.update()
                 os.system("aplay resources/music/better_together.wav")
                 Screens.show_frame("TitleScreen")
+                Screens.update()

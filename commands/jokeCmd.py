@@ -2,6 +2,8 @@ from command import Command
 from screens.jokeScreen import JokeScreen
 import speech
 from time import sleep
+import Tkinter as tk
+
 
 class JokeCmd(Command):             #command for telling jokes
     INSTRUCTIONS = ['joke','jokes'] #list of keywords

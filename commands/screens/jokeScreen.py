@@ -26,9 +26,7 @@ class JokeScreen(tk.Frame):
         response2 = tk.Label(self, text="Is there an owl in here? LOL", fg="white",bg="black",font=("Helvetica", 30))
         response2.place(relx=0.5,rely=0.3,anchor='center')
     def clearScreen(self):
-        global knockl
         global response1
         global response2
-        knockl.destroy()
         response1.destroy()
         response2.destroy()

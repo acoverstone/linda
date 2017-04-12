@@ -14,7 +14,7 @@ class TodoScreen(tk.Frame):
 
     def showList(self,list):
         cnt = 1
-        for todo in list
+        for todo in list:
             label = tk.Label(self, text=list, fg="white",bg="black",font=("Helvetica", 30))
             label.place(relx=0.5,rely=0.25+(cnt*0.5),anchor='center')
             cnt+=1

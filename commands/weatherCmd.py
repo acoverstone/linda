@@ -155,7 +155,7 @@ class WeatherCmd(Command):             #command for telling jokes
         frame.day5(day5String)
         Screens.update()
         speech.speak(weatherString)
-        sleep(10)
+        sleep(15)
         Screens.show_frame("TitleScreen")
 
 ##weatherCmd = WeatherCmd()

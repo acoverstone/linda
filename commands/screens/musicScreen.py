@@ -9,3 +9,8 @@ class MusicScreen(tk.Frame):
         self.controller = controller
         label = tk.Label(self, text="Music", fg="white",bg="black",font=("Helvetica", 30))
         label.place(relx=0.5,rely=0.2,anchor='center')
+
+
+    def now_playing(self, songName):
+        label = tk.Label(self, text="now playing: " + songName, fg="white",bg="black",font=("Helvetica", 30))
+        label.place(relx=0.5,rely=0.3,anchor='center')

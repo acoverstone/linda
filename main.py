@@ -1,6 +1,5 @@
 import snowboydecoder
 import sys
-import os
 import signal
 from commands import speech
 from commands.screens.screens import Screens
@@ -18,8 +17,9 @@ from commands.meditationCmd import MeditationCmd
 
 Screens = Screens()
 def controlLoop():
-        os.system("amixer cset numid=3 1")
+    gloabl Screens
         speech.speak('Hi, how can I help you?')
+        Screens.show_frame("ListeningScreen")
         commandString = speech.takeInput()
         commands = [WeatherCmd(), JokeCmd(), ReminderCmd(), ExitCmd(), TimerCmd(), MusicCmd(), UpdateCmd(), TodoCmd(), MeditationCmd()]
         found = False

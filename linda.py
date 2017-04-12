@@ -3,6 +3,7 @@
 
 import snowboydecoder
 import sys
+import os
 import signal
 import main
 from commands import speech
@@ -32,6 +33,7 @@ model = "resources/linda.pmdl"
 signal.signal(signal.SIGINT, signal_handler)
 
 while True:
+    os.system("amixer cset numid=3 1")
     Screens = main.getScreens()
     Screens.update_idletasks()
     Screens.update()

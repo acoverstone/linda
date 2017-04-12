@@ -2,6 +2,7 @@ import Tkinter as tk
 import time
 
 from commands.screens.titleScreen import TitleScreen
+from commands.screens.listeningScreen import ListeningScreen
 from commands.screens.jokeScreen import JokeScreen
 from commands.screens.weatherScreen import WeatherScreen
 from commands.screens.musicScreen import MusicScreen
@@ -20,7 +21,7 @@ class Screens(tk.Tk):
         container.grid_columnconfigure(0, weight=1)
 
         self.frames = {}
-        for F in (WeatherScreen, JokeScreen, TitleScreen, MusicScreen):
+        for F in (WeatherScreen, JokeScreen, TitleScreen, MusicScreen,ListeningScreen):
             page_name = F.__name__
             frame = F(parent=container, controller=self)
             self.frames[page_name] = frame
@@ -43,4 +44,3 @@ class Screens(tk.Tk):
     def getFrame(self):
         global frame
         return frame
-

@@ -31,7 +31,6 @@ class WeatherCmd(Command):             #command for telling jokes
         print(string.capwords(day1._status))
 
         weatherString = "Today is " + day1._status + " with a high of " + str(round(day1._temperature['max']*9/5-459.67,2)) + " degrees, and a low of " + str(round(day1._temperature['min']*9/5-459.67,2)) + " degrees."
-        speech.speak(weatherString)
         frame.today(weatherString)
         day1tempmin = str(round(day1._temperature['min']*9/5-459.67,2))
         day1tempmax = str(round(day1._temperature['max']*9/5-459.67,2))
@@ -153,6 +152,7 @@ class WeatherCmd(Command):             #command for telling jokes
         day5String += ('eve ' + day5tempeve + '\n')
         day5String += ('night ' + day5tempnight + '\n')
         frame.day5(day5String)
+        speech.speak(weatherString)
 
 ##weatherCmd = WeatherCmd()
 ##weatherCmd.decode("weather")

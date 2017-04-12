@@ -18,7 +18,7 @@ class WeatherScreen(tk.Frame):
         label = tk.Label(self, text=day2, fg="white",bg="black",font=("Helvetica", 30))
         label.place(relx=0.20,rely=0.40,anchor='center')
     def day3(self,day3):
-        label = tk.Label(self, text=day3 fg="white",bg="black",font=("Helvetica", 30))
+        label = tk.Label(self, text=day3, fg="white",bg="black",font=("Helvetica", 30))
         label.place(relx=0.40,rely=0.40,anchor='center')
     def day4(self,day4):
         label = tk.Label(self, text=day4, fg="white",bg="black",font=("Helvetica", 30))

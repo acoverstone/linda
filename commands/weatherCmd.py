@@ -3,6 +3,7 @@ from datetime import datetime
 import speech
 import string
 from command import Command
+from time import sleep
 
 class WeatherCmd(Command):             #command for telling jokes
     INSTRUCTIONS = ['weather']      #list of keywords
@@ -152,6 +153,8 @@ class WeatherCmd(Command):             #command for telling jokes
         day5String += ('eve ' + day5tempeve + '\n')
         day5String += ('night ' + day5tempnight + '\n')
         frame.day5(day5String)
+
+        sleep(2)
         speech.speak(weatherString)
 
 ##weatherCmd = WeatherCmd()

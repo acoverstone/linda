@@ -1,5 +1,6 @@
 import snowboydecoder
 import sys
+import os
 import signal
 from commands import speech
 from commands.screens.screens import Screens

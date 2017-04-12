@@ -1,6 +1,6 @@
 from command import Command
 import speech
-
+from time import sleep
 
 class TodoCmd(Command):
 	INSTRUCTIONS = ["to do"]
@@ -46,9 +46,10 @@ class TodoCmd(Command):
                 elif "read" in response:
                         with open("resources/todo.txt") as f:
                                 todo_list = f.read().splitlines()
-			frame.showList(todo_list)
-			Screens.update()
-                        speech.speak(todo_list)
+                                frame.showList(todo_list)
+                                Screens.update()
+                                sleep(15)
+##                                speech.speak(todo_list)
 
                 else:
                         speech.speak("I'm sorry that command does not exist")

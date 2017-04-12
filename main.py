@@ -17,7 +17,7 @@ from commands.meditationCmd import MeditationCmd
 
 Screens = Screens()
 def controlLoop():
-    gloabl Screens
+    global Screens
         speech.speak('Hi, how can I help you?')
         Screens.show_frame("ListeningScreen")
         commandString = speech.takeInput()

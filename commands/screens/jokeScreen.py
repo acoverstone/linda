@@ -13,19 +13,19 @@ class JokeScreen(tk.Frame):
 
 
     def knock(self):
+        global knockl
         label.destroy()
-        knock = tk.Label(self, text="Knock Knock", fg="white",bg="black",font=("Helvetica", 30))
-        knock.place(relx=0.5,rely=0.15,anchor='center')
+        knockl = tk.Label(self, text="Knock Knock", fg="white",bg="black",font=("Helvetica", 30))
+        knockl.place(relx=0.5,rely=0.15,anchor='center')
     def response1(self):
+        global response1
         response1 = tk.Label(self, text="Who", fg="white",bg="black",font=("Helvetica", 30))
         response1.place(relx=0.5,rely=0.2,anchor='center')
     def response2(self):
+        global response2
         response2 = tk.Label(self, text="Is there an owl in here? LOL", fg="white",bg="black",font=("Helvetica", 30))
         response2.place(relx=0.5,rely=0.3,anchor='center')
     def clearScreen(self):
-        global knock
-        global response1
-        global response2
         knock.destroy()
         response1.destroy()
         response2.destroy()

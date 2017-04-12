@@ -18,8 +18,8 @@ from commands.meditationCmd import MeditationCmd
 Screens = Screens()
 def controlLoop():
         global Screens
-        speech.speak('Hi, how can I help you?')
         Screens.show_frame("ListeningScreen")
+        speech.speak('Hi, how can I help you?')
         commandString = speech.takeInput()
         commands = [WeatherCmd(), JokeCmd(), ReminderCmd(), ExitCmd(), TimerCmd(), MusicCmd(), UpdateCmd(), TodoCmd(), MeditationCmd()]
         found = False

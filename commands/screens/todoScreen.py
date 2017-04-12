@@ -12,6 +12,6 @@ class ListeningScreen(tk.Frame):
 
 
 
-    def showList(self,list)
+    def showList(self,list):
         label = tk.Label(self, text=list, fg="white",bg="black",font=("Helvetica", 30))
         label.place(relx=0.5,rely=0.3,anchor='center')

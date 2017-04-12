@@ -12,7 +12,7 @@ class MeditationCmd(Command):
         while not found:
             meditations = [0]
             numOfMeditations = len(meditations)
-            playing = random.randint(0, numOfMeditations)
+            playing = random.randint(0, numOfMeditations-1)
 
             for meditation in meditations:
                 if meditation is playing:
